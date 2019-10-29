@@ -1,3 +1,4 @@
+require 'pry'
 class Owner
   attr_reader :name, :species
   @@all=[]
@@ -30,6 +31,7 @@ class Owner
   
   def cats
     Cat.all.select do |cat|
+      binding.pry
       cat.owner == self
   
     end
